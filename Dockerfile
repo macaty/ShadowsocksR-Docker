@@ -16,7 +16,8 @@ RUN wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz && \
     cd libsodium* && \
     ./configure && make -j2 && make install && \
     ldconfig
-RUN git clone -b manyuser https://github.com/breakwa11/shadowsocks.git ~/shadowsocks
+#RUN git clone -b manyuser https://github.com/breakwa11/shadowsocks.git ~/shadowsocks
+git clone -b manyuser https://github.com/shadowsocksrr/shadowsocksr.git ~/shadowsocks
 
 ENV SSR_SERVER_ADDR 0.0.0.0
 ENV SSR_SERVER_PORT 8388
