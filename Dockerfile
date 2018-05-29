@@ -20,12 +20,12 @@ RUN wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz && \
 git clone -b manyuser https://github.com/shadowsocksrr/shadowsocksr.git ~/shadowsocks
 
 ENV SSR_SERVER_ADDR 0.0.0.0
-ENV SSR_SERVER_PORT 8388
-ENV SSR_PASSWORD password
-ENV SSR_METHOD aes-256-cfb
-ENV SSR_PROTOCOL origin
+ENV SSR_SERVER_PORT 80
+ENV SSR_PASSWORD cisco
+ENV SSR_METHOD chacha20
+ENV SSR_PROTOCOL auth_sha1_v4_compatible
 ENV SSR_TIMEOUT 300
-ENV SSR_OBFS tls1.0_session_auth_compatible
+ENV SSR_OBFS http_simple_compatible
 
 ADD shadowsocks.json /etc/
 ADD start.sh /usr/local/bin/start.sh
