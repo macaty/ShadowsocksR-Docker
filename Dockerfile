@@ -2,7 +2,7 @@
 # 
 # Version:1.0
 
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER smounives <smounives@outlook.com>
 
 ENV REFRESHED_AT 2016-03-20
