@@ -1,11 +1,4 @@
-# About ShadowsocksR of Docker
-# 
-# Version:1.0
-
 FROM ubuntu:16.04
-MAINTAINER smounives <smounives@outlook.com>
-
-ENV REFRESHED_AT 2016-03-20
 
 RUN apt-get -qq update && \
     apt-get install -q -y wget build-essential python m2crypto git && \
